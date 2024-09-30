@@ -1,0 +1,400 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+
+.hello h2 {
+    margin: 0;
+}
+
+/* News Section */
+.news-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.news-image {
+    width: 70%;
+}
+
+.news-image img {
+    width: 100%;
+    height: auto;
+}
+
+.news-description {
+    width: 25%;
+    padding-left: 20px;
+}
+
+.news-button {
+    width: 5%;
+}
+
+.news-button button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.news-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+    }
+
+    .news-image,
+    .news-description,
+    .news-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset and Font Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {position: relative;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+header {
+    background-color: #2d2d2d;
+    
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+.navbar .logo img {
+    width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    z-index: 123;
+}
+
+.hidden {
+    display: none; /* This class will hide elements */
+}
+
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #d9534f;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2d2d2d;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links a {
+        font-size: 22px;
+    }
+}
+
+/* Transition for the mobile menu */
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 20px;
+        padding: 10px 30px;
+    }
+}
+
+/* Contact Header Styling */
+.hello {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    opacity: 70%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.subhello {
+    color: white;
+}
+
+.contact-header {
+    background-image: url('https://www.ccigint.com/wp-content/uploads/2023/11/Business-Inquiry-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-header h2 {
+    color: white;
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* Robot Thoughts Section */
+.robot-container {
+    position: fixed;
+    bottom: 20px; /* Position it slightly above the bottom */
+    right: 20px; /* Positioned at the bottom-right */
+    text-align: center;
+    z-index: 1;
+  
+}
+
+.robot-image {
+    width: 80px; /* Default size */
+    transition: transform 0.3s ease, width 0.3s ease; /* Use transform for smoothness */
+}
+
+.thought-bubble {
+    position: fixed;
+    bottom: 100px; /* Moves the thought bubble above the robot */
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 200px; /* Slightly larger width */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: block; /* Ensure it's always displayed */
+   z-index: 999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .robot-container {
+        bottom: 10px; /* Adjust position for smaller screens */
+        right: 10px; /* Adjust position for smaller screens */
+    }
+
+    .robot-image {
+        width: 60px; /* Reduce size for smaller screens */
+    }
+
+    .thought-bubble {
+        width: 150px; /* Adjust width */
+    }
+
+    .thought-bubble p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .robot-image {
+        width: 50px; /* Further reduce size on very small screens */
+    }
+
+    .thought-bubble {
+        width: 130px; /* Adjust width */
+    }
+
+    .thought-bubble p {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Robot Thoughts Section */
+
+
+
+/* Adding a "triangle" to mimic the message pointer */
+.thought-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Below the thought bubble */
+    right: 30px; /* Adjusts where the triangle appears */
+    border-width: 10px;
+    border-style: solid;
+    border-color: white transparent transparent transparent; /* Triangle pointing down */
+}
+
+/* Footer Section */
+footer {
+    background-color: #2d2d2d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .contact-header h2 {
+        font-size: 36px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+
+    .social-icon i {
+        font-size: 36px;
+    }
+
+    .social-icon span {
+        font-size: 14px;
+    }
+
+}
+
+/* Ensure the footer is responsive */
+footer {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
